@@ -11,15 +11,26 @@ function leftPad(number, targetLength) {
 }
 
 function check(combo){
-	
+	if(combo == pinCode){
+    return true;
+  }
+  else false;
 }
 
 var found = false;
 var count = 0;
-while(!found && count < 10000){
-	
-}
 
-if (found) {
-	alert();
+while(!found && count < 10000){
+  // alert("in while loop");
+  var output = leftPad(count,4);
+  // alert("got output: "+output);
+  // alert("found is: " + check(output));
+  found = check(output);
+
+
+  count++;
+
+if (found == true) {
+	alert(output);
+}
 }
